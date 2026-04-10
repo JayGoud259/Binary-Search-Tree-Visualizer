@@ -1,4 +1,4 @@
-//LINE 1 TO LINE 70 WRITTEN BY MEET PUNAMIYA 1012411186
+//THIS IS DONE BY MEET PUNAMIYA 1012411186
 import java.util.Scanner;
 
 class Node {
@@ -67,7 +67,6 @@ public class MainMeet {
             }
 
         } while (choice != 3);
-//ALL THE ABOVE LINES ARE WRITTEN BY MEET PUNAMIYA 1012411186
         
         sc.close();
     }
