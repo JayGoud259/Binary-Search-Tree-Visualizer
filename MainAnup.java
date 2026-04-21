@@ -1,4 +1,3 @@
-import java.util.*;
 
 class Node {
     int data;
@@ -12,7 +11,6 @@ class Node {
 
 public class MainAnup {
 
-    // Function to delete a node
     static Node delete(Node root, int key) {
         if (root == null) return null;
 
@@ -21,8 +19,6 @@ public class MainAnup {
         } else if (key > root.data) {
             root.right = delete(root.right, key);
         } else {
-            // Node found
-
             // Case 1: No child
             if (root.left == null && root.right == null)
                 return null;
@@ -41,7 +37,6 @@ public class MainAnup {
         return root;
     }
 
-    // Find minimum value node
     static Node minValueNode(Node node) {
         Node current = node;
         while (current.left != null)
@@ -49,7 +44,6 @@ public class MainAnup {
         return current;
     }
 
-    // Inorder traversal (for checking)
     static void inorder(Node root) {
         if (root != null) {
             inorder(root.left);
@@ -59,11 +53,6 @@ public class MainAnup {
     }
 
     public static void main(String[] args) {
-        /*
-         NOTE:
-         Since deletion requires an existing BST,
-         here we manually create one for demonstration.
-        */
 
         Node root = new Node(50);
         root.left = new Node(30);
@@ -73,11 +62,12 @@ public class MainAnup {
         root.right.left = new Node(60);
         root.right.right = new Node(80);
 
-        Scanner sc = new Scanner(System.in);
-        int key = sc.nextInt();
+        // 🔴 Hardcoded key instead of Scanner
+        int key = 50;
 
         root = delete(root, key);
 
+        System.out.println("Inorder after deletion:");
         inorder(root);
     }
 }
